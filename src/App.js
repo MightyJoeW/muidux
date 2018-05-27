@@ -1,8 +1,11 @@
 // External Dependencies
 import React, { Component } from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import logo from './logo.svg';
+import Button from '@material-ui/core/Button';
+
+// Internal Dependencies
 import './App.css';
+import logo from './logo.svg';
 
 // Local Variables
 const app = {
@@ -17,6 +20,10 @@ const appHeader = {
   color: 'white',
 }
 
+const appIntro = {
+  fontSize: 'large',
+}
+
 const appLogo = {
   animation: 'App-logo-spin infinite 20s linear',
   height: '80px',
@@ -24,10 +31,6 @@ const appLogo = {
 
 const appTitle = {
   fontSize: '1.5em',
-}
-
-const appIntro = {
-  fontSize: 'large',
 }
 
 // Component Definition
@@ -43,6 +46,9 @@ class App extends Component {
         <p style={appIntro}>
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <Button variant="raised" color="primary">
+          Go Create!
+    </Button>
       </div>
     );
   }
