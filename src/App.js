@@ -2,10 +2,12 @@
 import React, { Component } from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Button from '@material-ui/core/Button';
+import { connect } from 'react-redux';
 
 // Internal Dependencies
 import './App.css';
 import logo from './logo.svg';
+import { updateExampleText } from './state/reducer';
 
 // Local Variables
 const app = {
@@ -46,7 +48,11 @@ class App extends Component {
         <p style={appIntro}>
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <Button variant="raised" color="primary">
+        <Button
+          variant="raised"
+          color="primary"
+          onClick={this.props.updateExampleText}
+        >
           Go Create!
     </Button>
       </div>
@@ -54,4 +60,11 @@ class App extends Component {
   }
 }
 
-export default App;
+function mapStateToProps(state) {
+  const { exampleText } = state;
+  return {
+    exampleText
+  }
+}
+
+export default connect(mapStateToProps, { updateExampleText })(App);
