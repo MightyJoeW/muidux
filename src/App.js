@@ -38,6 +38,10 @@ const appTitle = {
 // Component Definition
 class App extends Component {
   render() {
+    const {
+      updateExampleText
+    } = this.props;
+
     return (
       <div style={app}>
         <CssBaseline />
@@ -51,7 +55,7 @@ class App extends Component {
         <Button
           variant="raised"
           color="primary"
-          onClick={this.props.updateExampleText}
+          onClick={updateExampleText}
         >
           Go Create!
     </Button>
