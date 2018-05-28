@@ -3,7 +3,7 @@ const EXAMPLE = 'EXAMPLE';
 
 // INITIAL STATE
 let initialState = {
-    exampleText: ''
+    exampleText: '',
 }
 
 // ACTION CREATORS
