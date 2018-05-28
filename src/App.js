@@ -43,7 +43,7 @@ class App extends Component {
         <CssBaseline />
         <header style={appHeader}>
           <img src={logo} style={appLogo} alt="logo" />
-          <h1 style={appTitle}>Welcome to MuiDucks</h1>
+          <h1 style={appTitle}>Welcome to MuiDux</h1>
         </header>
         <p style={appIntro}>
           To get started, edit <code>src/App.js</code> and save to reload.
