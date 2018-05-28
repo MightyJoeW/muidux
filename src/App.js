@@ -38,12 +38,16 @@ const appTitle = {
 // Component Definition
 class App extends Component {
   render() {
+    const {
+      updateExampleText
+    } = this.props;
+
     return (
       <div style={app}>
         <CssBaseline />
         <header style={appHeader}>
           <img src={logo} style={appLogo} alt="logo" />
-          <h1 style={appTitle}>Welcome to MuiDucks</h1>
+          <h1 style={appTitle}>Welcome to MuiDux</h1>
         </header>
         <p style={appIntro}>
           To get started, edit <code>src/App.js</code> and save to reload.
@@ -51,7 +55,7 @@ class App extends Component {
         <Button
           variant="raised"
           color="primary"
-          onClick={this.props.updateExampleText}
+          onClick={updateExampleText}
         >
           Go Create!
     </Button>
